@@ -1,0 +1,20 @@
+{
+  "name" : "Hello JJ",
+  "version" : "0.2",
+  "description" : "Crate QR code.",
+  "permissions": ["contextMenus", "tabs" ],
+  "background": {
+    "scripts": ["contextPop.js"]
+  },
+  "content_scripts": [
+    {
+    	"matches": 'http://*/*',
+        "js": ["dom.js"]
+    }
+],
+  "browser_action": {
+     "default_icon": "icon16.png",
+     "default_popup": "qc.html"
+  },
+  "manifest_version": 2
+}
